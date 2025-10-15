@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Test</title>
+</head>
+<body>
+    
+    <script>
+
+        // Function that changes dash-separated words into camelCase
+        
+        // Remove dash
+        // Test .split
+
+        let camelize = "background-color-test";
+        console.log(`Initial value: ${camelize}`);
+
+        camelize = camelize.split("-");
+        console.log(`Second value after split: ${camelize}`);
+        console.log(Array.isArray(camelize));
+
+        // Uppercase each word after dash
+        const slicedCamelize = camelize.slice(1);
+        console.log(`Sliced array: ${slicedCamelize}`);
+
+        function upperCaseWord(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+
+        const mappedSlicedCamelize = slicedCamelize.map(upperCaseWord);
+        console.log(`Mapped array: ${mappedSlicedCamelize}`);
+
+        // Join them again
+
+    </script>
+
+</body>
+</html>
